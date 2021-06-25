@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://bangbangsoftware.github.io/onit/precache-manifest.c88e171deb717fb6e43628678a1cb235.js"
+  "https://bangbangsoftware.github.io/onit/precache-manifest.d0a12d8b7927f659e3e71c564cfc46b3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "doit"});
