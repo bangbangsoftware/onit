@@ -2,24 +2,27 @@
   <div>
     <div class="fill-grid" v-if="showDays">
       <v-card :loading="loading" class="mx-auto my-12">
-          <v-card-title>What are the teams working hours?</v-card-title>
+        <v-card-title>What are the teams working hours?</v-card-title>
         <days
           v-on:times-changed="update($event)"
           v-bind:people="people"
+          v-bind:defaultHours="defaultHours"
           v-bind:dateRange="dateRange"
         ></days>
       </v-card>
       <div class="gap-right">
-      <v-card :loading="loading" class="mx-auto my-12">
+        <v-card :loading="loading" class="mx-auto my-12">
           <v-card-title>How are we busy?</v-card-title>
-        <work v-bind:timeBudget="timeBudget" v-bind:times="times"></work>
-      </v-card>
+          <work v-bind:timeBudget="timeBudget" v-bind:times="times"></work>
+        </v-card>
       </div>
     </div>
     <div v-else class="center">
       <v-card :loading="loading" class="mx-auto my-3">
         <div>
-          <v-card-title class="title">Pick Date Range for the Sprint</v-card-title>
+          <v-card-title class="title"
+            >Pick Date Range for the Sprint</v-card-title
+          >
           <v-card-subtitle
             ><b>{{ dateRange[0] }}</b> to
             <b>{{ dateRange[1] }}</b></v-card-subtitle
@@ -27,29 +30,28 @@
 
           <dates v-on:dates-picked="dates($event)"></dates>
         </div>
-        <v-row class="d-hours">
-          <v-text-field
-            type="number"
-            v-model="defaultHours"
-            label="Default Hours"
-          ></v-text-field>
-        </v-row>
+        <div class="d-hours"></div>
+        <v-card-subtitle class="bold">The Team</v-card-subtitle>
         <v-row
           class="people-grid"
           v-for="(person, peopleIndex) in people"
           v-bind:key="peopleIndex"
         >
           <v-col>
-            <v-btn x-small @click="drop(peopleIndex)">-</v-btn>
+            <v-btn x-small @click="drop(peopleIndex)" elevation="2" fab icon>
+              <v-icon>mdi-minus</v-icon>
+            </v-btn>
           </v-col>
-          <v-col> {{ person.name }} </v-col>
-          <v-col> {{ person.role }} </v-col>
+          <v-col class="name"> {{ person.name }} </v-col>
+          <v-col class="left"> {{ person.role }} </v-col>
         </v-row>
         <v-row class="add-grid">
           <v-col class="add-but">
-            <v-btn x-small @click="add()">+</v-btn>
+            <v-btn x-small @click="add()" elevation="2" fab icon>
+              <v-icon>mdi-plus</v-icon>
+            </v-btn>
           </v-col>
-          <v-col>
+          <v-col class="name">
             <v-text-field label="Name*" v-model="name" required></v-text-field>
           </v-col>
           <v-col>
@@ -62,8 +64,19 @@
             ></v-autocomplete>
           </v-col>
         </v-row>
-        <v-card-actions v-if="ready()" class="right-action">
-          <v-btn color="deep-purple lighten-2" text @click="done()">Done</v-btn>
+        <v-card-actions v-if="ready()">
+          <v-text-field
+            type="number"
+            v-model="defaultHours"
+            label="Default Hours"
+          ></v-text-field>
+          <v-btn
+            class="right-action"
+            color="deep-purple lighten-2"
+            text
+            @click="done()"
+            >Done</v-btn
+          >
         </v-card-actions>
       </v-card>
     </div>
@@ -109,6 +122,7 @@ export default Vue.extend({
       this.people.splice(index);
     },
     done: function () {
+      localStorage.setItem("defaultHours", "" + this.defaultHours);
       this.showDays = true;
     },
     update: function (update: any) {
@@ -117,6 +131,8 @@ export default Vue.extend({
     },
   },
   data: function () {
+    const dhString = localStorage.getItem("defaultHours");
+    const defaultHours = dhString ? parseFloat(dhString) : 7.5;
     return {
       showDays: false,
       dateRange: [],
@@ -124,7 +140,7 @@ export default Vue.extend({
       name: "",
       role: "",
       timeBudget: 0,
-      defaultHours: 7.5,
+      defaultHours,
       times: [],
     };
   },

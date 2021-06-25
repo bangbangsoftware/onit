@@ -4,7 +4,6 @@
       <v-text-field label="Ticket link"></v-text-field>
           <v-btn class="butt"
             v-on:click="reset()"
-            small
             elevation="2"
             text
           >
@@ -38,7 +37,7 @@
           <v-btn
             class="butt"
             v-on:click="add(person.name, person.role)"
-            small
+            x-small
             elevation="2"
             fab
             icon
@@ -72,7 +71,7 @@
             <v-btn
               class="butt"
               v-on:click="take(person.name, personTimeIndex)"
-              small
+              x-small
               elevation="2"
               fab
               icon

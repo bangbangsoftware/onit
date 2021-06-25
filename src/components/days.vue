@@ -159,11 +159,6 @@ export default Vue.extend({
   },
   props: ["people", "dateRange", "defaultHours"],
   methods: {
-    resetDates: function (dates: Array<string>) {
-      const from = new Date(dates[0]);
-      const to = new Date(dates[1]);
-      debugger;
-    },
     addDay: function () {
       const last = this.times[this.times.length - 1];
       const next = addDay(last, this.hoursPerDay);
@@ -239,7 +234,9 @@ export default Vue.extend({
     },
   },
   data: function () {
-    const hoursPerDay = this.defaultHours ? this.defaultHours : DEFAULT_HOURS;
+    const hoursPerDay = this.defaultHours
+      ? parseFloat(this.defaultHours)
+      : DEFAULT_HOURS;
     const times = initTimes(this.people, this.dateRange, hoursPerDay);
     const name = "";
     const role = "";

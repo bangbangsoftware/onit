@@ -7,6 +7,7 @@
 <script>
 import Vue from "vue";
 import { addDays } from "date-fns";
+import "./dates.css";
 
 const DEFAULT_DAY_QTY = 10;
 

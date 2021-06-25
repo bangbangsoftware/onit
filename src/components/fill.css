@@ -23,14 +23,23 @@
     margin-right: 40px
 }
 
+.name {
+    min-width: 100px;
+    text-align-last: left;
+}
+
+.left {
+    text-align-last: left;
+}
+
 .people-grid {
     display: grid;
-    grid-template-columns: 0fr 1fr 5fr;
+    grid-template-columns: 0fr 5fr 5fr;
     padding-left: 12%;
 }
 
 .right-action {
-    margin-left: 80%;
+    margin-left: 70%;
 }
 
 .title {
@@ -56,8 +65,16 @@
     padding-left: 42%;
 }
 
+.bold {
+    font-weight: bold;
+}
+
+.no-height {
+    height: unset;
+}
+
 .d-hours {
-    width: 5%;
     text-align: center;
-    margin-left: 501%;
+    margin-left: 1%;
+    min-width: 100px;
 }

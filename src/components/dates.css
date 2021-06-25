@@ -1,0 +1,3 @@
+#app > div > main > div > div > div > div > div:nth-child(1) > div:nth-child(3) > div > div.v-picker__body.theme--light > div > div.v-date-picker-table.v-date-picker-table--date.theme--light {
+    height: unset
+}
