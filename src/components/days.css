@@ -1,0 +1,56 @@
+.day-row {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr repeat(10, 1fr);
+    max-height: 54px;
+}
+
+.total-row {
+    display: grid;
+    grid-template-columns: 0.3fr 0.7fr repeat(10, 1fr);
+    max-height: 54px;
+}
+
+.role {
+    font-size: xx-small;
+}
+
+.person-but {
+    background-color: transparent;
+}
+
+.date {
+    padding-top: 12px;
+    min-width: 180px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.name-head {
+    min-width: 100px;
+    font-weight: bold;
+}
+
+.head {
+    font-weight: bold;
+}
+
+.small-but {
+    max-width: 15px;
+    max-height: 15px;
+    min-width: 15px;
+}
+
+.col-width {
+    min-width: 100px;
+}
+
+.but-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.controls {
+    min-width: 129px;
+}

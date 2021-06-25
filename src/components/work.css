@@ -1,0 +1,40 @@
+.people-lines {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.head {
+    text-decoration: underline;
+}
+
+.link {
+    margin: 10px;
+}
+
+.gap {
+    margin: 10px;
+}
+
+.butt {
+    margin-top: 19px;
+    margin-left: 10px;
+}
+
+.ticket-grid {
+    display: grid;
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    column-gap: 10px;
+}
+
+.people-row {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 5fr 2fr 0.5fr 1fr;
+    column-gap: 10px;
+    margin-right: 32px;
+}
+
+.total {
+    text-align: end;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
