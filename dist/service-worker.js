@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://bangbangsoftware.github.io/onit/precache-manifest.d0a12d8b7927f659e3e71c564cfc46b3.js"
+  "https://bangbangsoftware.github.io/onit/precache-manifest.f500648e78b8e6212316713151c7cd7b.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "doit"});
+workbox.core.setCacheNameDetails({prefix: "OnIt"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
