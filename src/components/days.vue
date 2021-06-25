@@ -18,9 +18,34 @@
     <v-row v-for="(day, index) in times" v-bind:key="index">
       <div class="day-row">
         <v-col class="mb-1 but-grid">
-          <v-btn class="small-but" x-small @click="allDayUp(index)">+</v-btn>
-          <v-btn class="small-but" x-small @click="allDayDown(index)">-</v-btn>
-          <v-btn class="small-but" x-small @click="zeroDay(index)">X</v-btn>
+          <v-btn
+            class="small-but"
+            x-small
+            @click="allDayUp(index)"
+            elevation="2"
+            fab
+            icon
+          >
+            <v-icon>mdi-plus</v-icon>
+          </v-btn>
+          <v-btn
+            class="small-but"
+            x-small
+            @click="allDayDown(index)"
+            elevation="2"
+            fab
+            icon
+          >
+            <v-icon>mdi-minus</v-icon>
+          </v-btn>
+          <v-btn
+            class="small-but"
+            x-small
+            @click="zeroDay(index)"
+            elevation="2"
+            fab
+            >0
+          </v-btn>
         </v-col>
 
         <v-col class="date mb-1">
@@ -44,7 +69,9 @@
     <v-row>
       <div class="total-row">
         <v-col class="mb-1 controls">
-          <v-btn x-small @click="addDay()">+</v-btn>
+          <v-btn class="left-22" x-small @click="addDay()" elevation="2" fab icon>
+            <v-icon>mdi-plus</v-icon>
+          </v-btn>
         </v-col>
         <v-col class="date mb-1">Total Hours</v-col>
         <div

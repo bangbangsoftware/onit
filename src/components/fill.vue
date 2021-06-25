@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="fill-grid" v-if="showDays">
-      <v-card :loading="loading" class="mx-auto my-12">
+      <v-card class="mx-auto my-12">
         <v-card-title>What are the teams working hours?</v-card-title>
         <days
           v-on:times-changed="update($event)"
@@ -11,14 +11,14 @@
         ></days>
       </v-card>
       <div class="gap-right">
-        <v-card :loading="loading" class="mx-auto my-12">
+        <v-card class="mx-auto my-12">
           <v-card-title>How are we busy?</v-card-title>
           <work v-bind:timeBudget="timeBudget" v-bind:times="times"></work>
         </v-card>
       </div>
     </div>
     <div v-else class="center">
-      <v-card :loading="loading" class="mx-auto my-3">
+      <v-card class="mx-auto my-3">
         <div>
           <v-card-title class="title"
             >Pick Date Range for the Sprint</v-card-title

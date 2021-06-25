@@ -163,7 +163,7 @@ const addAllTotals = (peopleMap: PeopleMap) => {
   const totals = keys.map((key: string) => {
     const peopleTime: PeopleTime = peopleMap[key];
     const total = addAll(peopleTime.times);
-    return parseInt("" + total);
+    return parseFloat("" + total);
   });
   if (totals.length == 0) {
     return 0;

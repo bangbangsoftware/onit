@@ -37,9 +37,11 @@
 }
 
 .small-but {
-    max-width: 15px;
-    max-height: 15px;
-    min-width: 15px;
+    margin:5px;
+}
+
+.left-22 {
+    margin-left: 22px;
 }
 
 .col-width {
