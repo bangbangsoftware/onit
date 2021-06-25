@@ -1,11 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app color="primary" dark>
-      <v-btn
-        href="."
-        style="background-color: #1976d2"
-        class="d-flex align-center"
-      >
+      <v-btn style="background-color: #1976d2" class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
           class="shrink mr-2"
@@ -19,7 +15,7 @@
 
       <v-spacer></v-spacer>
 
-<!--
+      <!--
       <v-btn href="/#/fill" text>
         <span class="mr-2">Fill</span>
         <v-icon>mdi-open-in-new</v-icon>
