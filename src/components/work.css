@@ -1,6 +1,7 @@
 .people-lines {
     display: grid;
     grid-template-columns: auto;
+    text-align-last: left;
 }
 
 .head {
