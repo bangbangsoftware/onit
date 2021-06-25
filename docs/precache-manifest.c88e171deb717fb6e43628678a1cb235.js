@@ -1,14 +1,14 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5ebbad7d3f834422c24",
-    "url": "https://bangbangsoftware.github.io/onit/css/app.4fed239b.css"
+    "revision": "f3108c5c0799d92840ea",
+    "url": "https://bangbangsoftware.github.io/onit/css/app.f1d802e5.css"
   },
   {
     "revision": "b07049307c89c6a3e83d",
     "url": "https://bangbangsoftware.github.io/onit/css/chunk-vendors.fe837064.css"
   },
   {
-    "revision": "eef6654a827437255247a83b64fdc63a",
+    "revision": "369c615429aec13ad59f59ee29925820",
     "url": "https://bangbangsoftware.github.io/onit/index.html"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://bangbangsoftware.github.io/onit/js/about.5ccbb86e.js"
   },
   {
-    "revision": "a5ebbad7d3f834422c24",
+    "revision": "f3108c5c0799d92840ea",
     "url": "https://bangbangsoftware.github.io/onit/js/app.b557362b.js"
   },
   {
