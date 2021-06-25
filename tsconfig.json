@@ -34,8 +34,9 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx"
-  ],
+, "dates.d.ts"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "vue-date-fns"
   ]
 }

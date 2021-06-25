@@ -72,9 +72,9 @@
 
 <script lang="ts">
 import Vue from "vue";
-import Days from "./days";
-import Dates from "./dates";
-import Work from "./work";
+import Days from "@/components/days.vue";
+import Dates from "./dates.vue";
+import Work from "./work.vue";
 import "./fill.css";
 
 const DEFAULT_HOURS = 7.5;
