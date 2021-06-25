@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app color="primary" dark>
       <v-btn
-        href="/"
+        href="."
         style="background-color: #1976d2"
         class="d-flex align-center"
       >
