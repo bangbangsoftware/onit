@@ -1,0 +1,17 @@
+.people-row {
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 5fr 2fr 0.5fr 1fr;
+    column-gap: 10px;
+    margin-right: 32px;
+}
+
+.butt {
+    margin-top: 19px;
+    margin-left: 10px;
+}
+
+.total {
+    text-align: end;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
